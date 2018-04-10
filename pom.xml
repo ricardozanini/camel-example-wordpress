@@ -5,13 +5,14 @@
 	<groupId>sample.camel</groupId>
 	<artifactId>camel-example-wordpress</artifactId>
 	<version>1.0</version>
+	<packaging>jar</packaging>
 	<name>Camel :: Example :: Wordpress</name>
 	<description>A camel-wordpress example to generate reports based on soccer stats API</description>
 	<properties>
 		<camel.version>2.21.0</camel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<spring.boot-version>1.5.8.RELEASE</spring.boot-version>
+		<spring.boot-version>1.5.10.RELEASE</spring.boot-version>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencyManagement>
@@ -35,15 +36,40 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		<!-- Enabling health checks -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Camel -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-servlet-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-swagger-java-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-wordpress</artifactId>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-restlet</artifactId>
+		</dependency>
 		<!-- testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -56,7 +82,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
