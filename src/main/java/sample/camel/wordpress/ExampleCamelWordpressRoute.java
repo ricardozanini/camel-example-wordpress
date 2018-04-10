@@ -51,6 +51,10 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
             .to(String.format("rest:get:%s?host=%s&synchronous=true", footballApiFixturePath, footballApiHost))
             .unmarshal().json(JsonLibrary.Jackson, Statistics.class)
             .log("${body}");
+        
+        // convert to NLG
+        
+        // send data to wordpress as a new post
     }
 
 }
