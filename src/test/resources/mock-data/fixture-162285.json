@@ -1,1 +1,294 @@
-{"fixture":{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/162285"},"competition":{"href":"http://api.football-data.org/v1/competitions/452"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2018-04-09T18:30:00Z","status":"FINISHED","matchday":29,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":4,"halfTime":{"goalsHomeTeam":1,"goalsAwayTeam":1}},"odds":null},"head2head":{"count":4,"timeFrameStart":"2016-11-18","timeFrameEnd":"2018-04-09","homeTeamWins":2,"awayTeamWins":1,"draws":1,"lastHomeWinHomeTeam":{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/152014"},"competition":{"href":"http://api.football-data.org/v1/competitions/430"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2017-04-08T13:30:00Z","status":"FINISHED","matchday":28,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":0,"halfTime":{"goalsHomeTeam":0,"goalsAwayTeam":0}},"odds":{"homeWin":2.1,"draw":3.5,"awayWin":3.3}},"lastWinHomeTeam":{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/152014"},"competition":{"href":"http://api.football-data.org/v1/competitions/430"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2017-04-08T13:30:00Z","status":"FINISHED","matchday":28,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":0,"halfTime":{"goalsHomeTeam":0,"goalsAwayTeam":0}},"odds":{"homeWin":2.1,"draw":3.5,"awayWin":3.3}},"lastAwayWinAwayTeam":{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/162285"},"competition":{"href":"http://api.football-data.org/v1/competitions/452"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2018-04-09T18:30:00Z","status":"FINISHED","matchday":29,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":4,"halfTime":{"goalsHomeTeam":1,"goalsAwayTeam":1}},"odds":null},"lastWinAwayTeam":{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/162285"},"competition":{"href":"http://api.football-data.org/v1/competitions/452"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2018-04-09T18:30:00Z","status":"FINISHED","matchday":29,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":4,"halfTime":{"goalsHomeTeam":1,"goalsAwayTeam":1}},"odds":null},"fixtures":[{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/162285"},"competition":{"href":"http://api.football-data.org/v1/competitions/452"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2018-04-09T18:30:00Z","status":"FINISHED","matchday":29,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":4,"halfTime":{"goalsHomeTeam":1,"goalsAwayTeam":1}},"odds":null},{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/162430"},"competition":{"href":"http://api.football-data.org/v1/competitions/452"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/3"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/721"}},"date":"2017-11-18T15:30:00Z","status":"FINISHED","matchday":12,"homeTeamName":"Bayer Leverkusen","awayTeamName":"Red Bull Leipzig","result":{"goalsHomeTeam":2,"goalsAwayTeam":2,"halfTime":{"goalsHomeTeam":1,"goalsAwayTeam":1}},"odds":null},{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/152014"},"competition":{"href":"http://api.football-data.org/v1/competitions/430"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/721"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/3"}},"date":"2017-04-08T13:30:00Z","status":"FINISHED","matchday":28,"homeTeamName":"Red Bull Leipzig","awayTeamName":"Bayer Leverkusen","result":{"goalsHomeTeam":1,"goalsAwayTeam":0,"halfTime":{"goalsHomeTeam":0,"goalsAwayTeam":0}},"odds":{"homeWin":2.1,"draw":3.5,"awayWin":3.3}},{"_links":{"self":{"href":"http://api.football-data.org/v1/fixtures/152161"},"competition":{"href":"http://api.football-data.org/v1/competitions/430"},"homeTeam":{"href":"http://api.football-data.org/v1/teams/3"},"awayTeam":{"href":"http://api.football-data.org/v1/teams/721"}},"date":"2016-11-18T19:30:00Z","status":"FINISHED","matchday":11,"homeTeamName":"Bayer Leverkusen","awayTeamName":"Red Bull Leipzig","result":{"goalsHomeTeam":2,"goalsAwayTeam":3,"halfTime":{"goalsHomeTeam":2,"goalsAwayTeam":1}},"odds":null}]}}
+{
+	"fixture": {
+		"_links": {
+			"self": {
+				"href": "http://api.football-data.org/v1/fixtures/162285"
+			},
+			"competition": {
+				"href": "http://api.football-data.org/v1/competitions/452"
+			},
+			"homeTeam": {
+				"href": "http://api.football-data.org/v1/teams/721"
+			},
+			"awayTeam": {
+				"href": "http://api.football-data.org/v1/teams/3"
+			}
+		},
+		"date": "2018-04-09T18:30:00Z",
+		"status": "FINISHED",
+		"matchday": 29,
+		"homeTeamName": "Red Bull Leipzig",
+		"awayTeamName": "Bayer Leverkusen",
+		"result": {
+			"goalsHomeTeam": 1,
+			"goalsAwayTeam": 4,
+			"halfTime": {
+				"goalsHomeTeam": 1,
+				"goalsAwayTeam": 1
+			}
+		},
+		"odds": null
+	},
+	"head2head": {
+		"count": 4,
+		"timeFrameStart": "2016-11-18",
+		"timeFrameEnd": "2018-04-09",
+		"homeTeamWins": 2,
+		"awayTeamWins": 1,
+		"draws": 1,
+		"lastHomeWinHomeTeam": {
+			"_links": {
+				"self": {
+					"href": "http://api.football-data.org/v1/fixtures/152014"
+				},
+				"competition": {
+					"href": "http://api.football-data.org/v1/competitions/430"
+				},
+				"homeTeam": {
+					"href": "http://api.football-data.org/v1/teams/721"
+				},
+				"awayTeam": {
+					"href": "http://api.football-data.org/v1/teams/3"
+				}
+			},
+			"date": "2017-04-08T13:30:00Z",
+			"status": "FINISHED",
+			"matchday": 28,
+			"homeTeamName": "Red Bull Leipzig",
+			"awayTeamName": "Bayer Leverkusen",
+			"result": {
+				"goalsHomeTeam": 1,
+				"goalsAwayTeam": 0,
+				"halfTime": {
+					"goalsHomeTeam": 0,
+					"goalsAwayTeam": 0
+				}
+			},
+			"odds": {
+				"homeWin": 2.1,
+				"draw": 3.5,
+				"awayWin": 3.3
+			}
+		},
+		"lastWinHomeTeam": {
+			"_links": {
+				"self": {
+					"href": "http://api.football-data.org/v1/fixtures/152014"
+				},
+				"competition": {
+					"href": "http://api.football-data.org/v1/competitions/430"
+				},
+				"homeTeam": {
+					"href": "http://api.football-data.org/v1/teams/721"
+				},
+				"awayTeam": {
+					"href": "http://api.football-data.org/v1/teams/3"
+				}
+			},
+			"date": "2017-04-08T13:30:00Z",
+			"status": "FINISHED",
+			"matchday": 28,
+			"homeTeamName": "Red Bull Leipzig",
+			"awayTeamName": "Bayer Leverkusen",
+			"result": {
+				"goalsHomeTeam": 1,
+				"goalsAwayTeam": 0,
+				"halfTime": {
+					"goalsHomeTeam": 0,
+					"goalsAwayTeam": 0
+				}
+			},
+			"odds": {
+				"homeWin": 2.1,
+				"draw": 3.5,
+				"awayWin": 3.3
+			}
+		},
+		"lastAwayWinAwayTeam": {
+			"_links": {
+				"self": {
+					"href": "http://api.football-data.org/v1/fixtures/162285"
+				},
+				"competition": {
+					"href": "http://api.football-data.org/v1/competitions/452"
+				},
+				"homeTeam": {
+					"href": "http://api.football-data.org/v1/teams/721"
+				},
+				"awayTeam": {
+					"href": "http://api.football-data.org/v1/teams/3"
+				}
+			},
+			"date": "2018-04-09T18:30:00Z",
+			"status": "FINISHED",
+			"matchday": 29,
+			"homeTeamName": "Red Bull Leipzig",
+			"awayTeamName": "Bayer Leverkusen",
+			"result": {
+				"goalsHomeTeam": 1,
+				"goalsAwayTeam": 4,
+				"halfTime": {
+					"goalsHomeTeam": 1,
+					"goalsAwayTeam": 1
+				}
+			},
+			"odds": null
+		},
+		"lastWinAwayTeam": {
+			"_links": {
+				"self": {
+					"href": "http://api.football-data.org/v1/fixtures/162285"
+				},
+				"competition": {
+					"href": "http://api.football-data.org/v1/competitions/452"
+				},
+				"homeTeam": {
+					"href": "http://api.football-data.org/v1/teams/721"
+				},
+				"awayTeam": {
+					"href": "http://api.football-data.org/v1/teams/3"
+				}
+			},
+			"date": "2018-04-09T18:30:00Z",
+			"status": "FINISHED",
+			"matchday": 29,
+			"homeTeamName": "Red Bull Leipzig",
+			"awayTeamName": "Bayer Leverkusen",
+			"result": {
+				"goalsHomeTeam": 1,
+				"goalsAwayTeam": 4,
+				"halfTime": {
+					"goalsHomeTeam": 1,
+					"goalsAwayTeam": 1
+				}
+			},
+			"odds": null
+		},
+		"fixtures": [
+			{
+				"_links": {
+					"self": {
+						"href": "http://api.football-data.org/v1/fixtures/162285"
+					},
+					"competition": {
+						"href": "http://api.football-data.org/v1/competitions/452"
+					},
+					"homeTeam": {
+						"href": "http://api.football-data.org/v1/teams/721"
+					},
+					"awayTeam": {
+						"href": "http://api.football-data.org/v1/teams/3"
+					}
+				},
+				"date": "2018-04-09T18:30:00Z",
+				"status": "FINISHED",
+				"matchday": 29,
+				"homeTeamName": "Red Bull Leipzig",
+				"awayTeamName": "Bayer Leverkusen",
+				"result": {
+					"goalsHomeTeam": 1,
+					"goalsAwayTeam": 4,
+					"halfTime": {
+						"goalsHomeTeam": 1,
+						"goalsAwayTeam": 1
+					}
+				},
+				"odds": null
+			},
+			{
+				"_links": {
+					"self": {
+						"href": "http://api.football-data.org/v1/fixtures/162430"
+					},
+					"competition": {
+						"href": "http://api.football-data.org/v1/competitions/452"
+					},
+					"homeTeam": {
+						"href": "http://api.football-data.org/v1/teams/3"
+					},
+					"awayTeam": {
+						"href": "http://api.football-data.org/v1/teams/721"
+					}
+				},
+				"date": "2017-11-18T15:30:00Z",
+				"status": "FINISHED",
+				"matchday": 12,
+				"homeTeamName": "Bayer Leverkusen",
+				"awayTeamName": "Red Bull Leipzig",
+				"result": {
+					"goalsHomeTeam": 2,
+					"goalsAwayTeam": 2,
+					"halfTime": {
+						"goalsHomeTeam": 1,
+						"goalsAwayTeam": 1
+					}
+				},
+				"odds": null
+			},
+			{
+				"_links": {
+					"self": {
+						"href": "http://api.football-data.org/v1/fixtures/152014"
+					},
+					"competition": {
+						"href": "http://api.football-data.org/v1/competitions/430"
+					},
+					"homeTeam": {
+						"href": "http://api.football-data.org/v1/teams/721"
+					},
+					"awayTeam": {
+						"href": "http://api.football-data.org/v1/teams/3"
+					}
+				},
+				"date": "2017-04-08T13:30:00Z",
+				"status": "FINISHED",
+				"matchday": 28,
+				"homeTeamName": "Red Bull Leipzig",
+				"awayTeamName": "Bayer Leverkusen",
+				"result": {
+					"goalsHomeTeam": 1,
+					"goalsAwayTeam": 0,
+					"halfTime": {
+						"goalsHomeTeam": 0,
+						"goalsAwayTeam": 0
+					}
+				},
+				"odds": {
+					"homeWin": 2.1,
+					"draw": 3.5,
+					"awayWin": 3.3
+				}
+			},
+			{
+				"_links": {
+					"self": {
+						"href": "http://api.football-data.org/v1/fixtures/152161"
+					},
+					"competition": {
+						"href": "http://api.football-data.org/v1/competitions/430"
+					},
+					"homeTeam": {
+						"href": "http://api.football-data.org/v1/teams/3"
+					},
+					"awayTeam": {
+						"href": "http://api.football-data.org/v1/teams/721"
+					}
+				},
+				"date": "2016-11-18T19:30:00Z",
+				"status": "FINISHED",
+				"matchday": 11,
+				"homeTeamName": "Bayer Leverkusen",
+				"awayTeamName": "Red Bull Leipzig",
+				"result": {
+					"goalsHomeTeam": 2,
+					"goalsAwayTeam": 3,
+					"halfTime": {
+						"goalsHomeTeam": 2,
+						"goalsAwayTeam": 1
+					}
+				},
+				"odds": null
+			}
+		]
+	}
+}
