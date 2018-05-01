@@ -1,0 +1,11 @@
+## Away team win
+{date} {Team A} visited {Team B} to bring home a [outstanding] victory by the score of {score}.
+
+## Home team win
+{date} {Team A} welcomed and [properly] won {Team B} by the score of {score}. 
+
+## Draw with goals
+{date} {Team A} and {Team B} drew with {goals} for each side.
+
+## Draw without goals 
+{date} {Team A} and {Team B} drawn. Neither teams scored a goal during game.

@@ -1,0 +1,164 @@
+{
+	"fixture": {
+		"_links": {
+			"self": {
+				"href": "http://api.football-data.org/v1/fixtures/158190"
+			},
+			"competition": {
+				"href": "http://api.football-data.org/v1/competitions/444"
+			},
+			"homeTeam": {
+				"href": "http://api.football-data.org/v1/teams/1765"
+			},
+			"awayTeam": {
+				"href": "http://api.football-data.org/v1/teams/1774"
+			}
+		},
+		"date": "2017-05-14T14:00:00Z",
+		"status": "FINISHED",
+		"matchday": 1,
+		"homeTeamName": "Fluminense FC",
+		"awayTeamName": "Santos FC",
+		"result": {
+			"goalsHomeTeam": 3,
+			"goalsAwayTeam": 2,
+			"halfTime": {
+				"goalsHomeTeam": 2,
+				"goalsAwayTeam": 1
+			}
+		},
+		"odds": null
+	},
+	"head2head": {
+		"count": 2,
+		"timeFrameStart": "2017-05-14",
+		"timeFrameEnd": "2017-08-15",
+		"homeTeamWins": 1,
+		"awayTeamWins": 0,
+		"draws": 1,
+		"lastHomeWinHomeTeam": {
+			"_links": {
+				"self": {
+					"href": "http://api.football-data.org/v1/fixtures/158190"
+				},
+				"competition": {
+					"href": "http://api.football-data.org/v1/competitions/444"
+				},
+				"homeTeam": {
+					"href": "http://api.football-data.org/v1/teams/1765"
+				},
+				"awayTeam": {
+					"href": "http://api.football-data.org/v1/teams/1774"
+				}
+			},
+			"date": "2017-05-14T14:00:00Z",
+			"status": "FINISHED",
+			"matchday": 1,
+			"homeTeamName": "Fluminense FC",
+			"awayTeamName": "Santos FC",
+			"result": {
+				"goalsHomeTeam": 3,
+				"goalsAwayTeam": 2,
+				"halfTime": {
+					"goalsHomeTeam": 2,
+					"goalsAwayTeam": 1
+				}
+			},
+			"odds": null
+		},
+		"lastWinHomeTeam": {
+			"_links": {
+				"self": {
+					"href": "http://api.football-data.org/v1/fixtures/158190"
+				},
+				"competition": {
+					"href": "http://api.football-data.org/v1/competitions/444"
+				},
+				"homeTeam": {
+					"href": "http://api.football-data.org/v1/teams/1765"
+				},
+				"awayTeam": {
+					"href": "http://api.football-data.org/v1/teams/1774"
+				}
+			},
+			"date": "2017-05-14T14:00:00Z",
+			"status": "FINISHED",
+			"matchday": 1,
+			"homeTeamName": "Fluminense FC",
+			"awayTeamName": "Santos FC",
+			"result": {
+				"goalsHomeTeam": 3,
+				"goalsAwayTeam": 2,
+				"halfTime": {
+					"goalsHomeTeam": 2,
+					"goalsAwayTeam": 1
+				}
+			},
+			"odds": null
+		},
+		"lastAwayWinAwayTeam": null,
+		"lastWinAwayTeam": null,
+		"fixtures": [
+			{
+				"_links": {
+					"self": {
+						"href": "http://api.football-data.org/v1/fixtures/157999"
+					},
+					"competition": {
+						"href": "http://api.football-data.org/v1/competitions/444"
+					},
+					"homeTeam": {
+						"href": "http://api.football-data.org/v1/teams/1774"
+					},
+					"awayTeam": {
+						"href": "http://api.football-data.org/v1/teams/1765"
+					}
+				},
+				"date": "2017-08-14T23:00:00Z",
+				"status": "FINISHED",
+				"matchday": 20,
+				"homeTeamName": "Santos FC",
+				"awayTeamName": "Fluminense FC",
+				"result": {
+					"goalsHomeTeam": 0,
+					"goalsAwayTeam": 0,
+					"halfTime": {
+						"goalsHomeTeam": 0,
+						"goalsAwayTeam": 0
+					}
+				},
+				"odds": null
+			},
+			{
+				"_links": {
+					"self": {
+						"href": "http://api.football-data.org/v1/fixtures/158190"
+					},
+					"competition": {
+						"href": "http://api.football-data.org/v1/competitions/444"
+					},
+					"homeTeam": {
+						"href": "http://api.football-data.org/v1/teams/1765"
+					},
+					"awayTeam": {
+						"href": "http://api.football-data.org/v1/teams/1774"
+					}
+				},
+				"date": "2017-05-14T14:00:00Z",
+				"status": "FINISHED",
+				"matchday": 1,
+				"homeTeamName": "Fluminense FC",
+				"awayTeamName": "Santos FC",
+				"result": {
+					"goalsHomeTeam": 3,
+					"goalsAwayTeam": 2,
+					"halfTime": {
+						"goalsHomeTeam": 2,
+						"goalsAwayTeam": 1
+					}
+				},
+				"odds": null
+			}
+		]
+	}
+}

@@ -10,7 +10,7 @@ public class Result implements Serializable {
     private Integer goalsHomeTeam;
     private Integer goalsAwayTeam;
     private Scoreboard halfTime;
-    
+
     public Result() {
         this.halfTime = new Scoreboard();
     }
@@ -38,5 +38,8 @@ public class Result implements Serializable {
     public void setHalfTime(Scoreboard halfTime) {
         this.halfTime = halfTime;
     }
-    
+
+    public String formattedFinalResults() {
+        return String.format("%s x %s", getGoalsHomeTeam(), getGoalsAwayTeam());
+    }
 }
