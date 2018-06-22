@@ -3,32 +3,17 @@ package sample.camel.wordpress;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sample.camel.wordpress.model.Statistics;
 import sample.camel.wordpress.nlg.ContentFactory;
 
 @Component
 public class ExampleCamelWordpressRoute extends RouteBuilder {
-        
-    @Value("${football.api.fixture.path}")
-    private String footballApiFixturePath;
     
-    @Value("${football.api.host}")
-    private String footballApiHost;
-    
-    @Value("${football.api.token}")
-    private String footballApiToken;
-    
-    @Value("${wordpress.url}")
-    private String wordpressUrl;
-    
-    @Value("${wordpress.user}")
-    private String wordpressUser;
-    
-    @Value("${wordpress.password}")
-    private String wordpressPassword;
-
+    @Autowired
+    private ExampleCamelWordpressRouteConfig config;
+  
     @Override
     public void configure() throws Exception {        
         restConfiguration() 
@@ -49,6 +34,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         
         //~~~~~~ Rest Routes
         from("direct:get-match-summary")
+            .routeId("get-match-summary")
             .to("direct:get-fixture-detail")
             .to("direct:convert-nlg");
         
@@ -60,8 +46,8 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         //~~~~~~ Routes specialization
         from("direct:get-fixture-detail")
             .routeId("get-fixture-details")
-            .setHeader("X-Auth-Token", constant(footballApiToken))
-            .to(String.format("rest:get:%s?host=%s&synchronous=true", footballApiFixturePath, footballApiHost))
+            .setHeader("X-Auth-Token", constant(config.getFootballApiToken()))
+            .to(String.format("rest:get:%s?host=%s&synchronous=true", config.getFootballApiFixturePath(), config.getFootballApiHost()))
             .unmarshal().json(JsonLibrary.Jackson, Statistics.class);
         
         from("direct:convert-nlg")
@@ -70,7 +56,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         
         from("direct:post-new-summary")
             // TODO: create a bean conversor from String to Post :)
-            .to(String.format("wordpress:post?url=%s&user=%s&password=%s", wordpressUrl, wordpressUser, wordpressPassword));
+            .to(String.format("wordpress:post?url=%s&user=%s&password=%s", config.getWordpressUrl(), config.getWordpressUser(), config.getWordpressPassword()));
     }
 
 }
