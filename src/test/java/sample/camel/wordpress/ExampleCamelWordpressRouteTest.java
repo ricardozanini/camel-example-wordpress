@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import sample.camel.wordpress.model.StatisticsSummary;
 
 @RunWith(CamelSpringBootRunner.class)
 @SpringBootTest(classes = ExampleCamelWordpressApplication.class)
@@ -45,8 +46,8 @@ public class ExampleCamelWordpressRouteTest {
     @Test
     public void test() {
         Object output = template.requestBodyAndHeader("direct:get-match-summary", null, "fixtureId", FIXTURE_ID);
-        assertThat(output).isInstanceOf(String.class);
-        assertThat((String)output).contains(MATCH_SUMMARY);
+        assertThat(output).isInstanceOf(StatisticsSummary.class);
+        assertThat(((StatisticsSummary)output).getSummary()).contains(MATCH_SUMMARY);
     }
 
 }

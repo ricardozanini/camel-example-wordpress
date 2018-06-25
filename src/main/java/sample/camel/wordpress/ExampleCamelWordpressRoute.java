@@ -1,6 +1,7 @@
 package sample.camel.wordpress;
 
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.wordpress.api.model.Post;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
             .to("direct:convert-nlg");
         
         from("direct:send-to-wordpress")
+            .routeId("send-to-wordpress")
             .to("direct:get-fixture-detail")
             .to("direct:convert-nlg")
             .to("direct:post-new-summary");
@@ -52,10 +54,10 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         
         from("direct:convert-nlg")
             .routeId("convert-nlg")
-            .bean(ContentFactory.class, "generate"); 
+            .bean(ContentFactory.class, "generate");
         
         from("direct:post-new-summary")
-            // TODO: create a bean conversor from String to Post :)
+            .convertBodyTo(Post.class)
             .to(String.format("wordpress:post?url=%s&user=%s&password=%s", config.getWordpressUrl(), config.getWordpressUser(), config.getWordpressPassword()));
     }
 

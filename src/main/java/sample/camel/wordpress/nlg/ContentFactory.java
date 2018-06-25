@@ -1,6 +1,7 @@
 package sample.camel.wordpress.nlg;
 
 import sample.camel.wordpress.model.Statistics;
+import sample.camel.wordpress.model.StatisticsSummary;
 
 /**
  * Factory for providing content according to {@link Statistics} data.
@@ -15,8 +16,10 @@ public final class ContentFactory {
         introTemplate = new IntroTemplate(context);
     }
     
-    public String generate(final Statistics statistics) {
-        return context.getRealiser().realiseSentence(introTemplate.createParagraph(statistics));
+    public StatisticsSummary generate(final Statistics statistics) {
+        final StatisticsSummary statisticsSummary = new StatisticsSummary(statistics);
+        statisticsSummary.setSummary(context.getRealiser().realiseSentence(introTemplate.createParagraph(statistics)));
+        return statisticsSummary;
     }
     
 }
