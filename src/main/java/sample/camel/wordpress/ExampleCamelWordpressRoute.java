@@ -57,6 +57,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
             .bean(ContentFactory.class, "generate");
         
         from("direct:post-new-summary")
+            .routeId("post-new-summary")
             .convertBodyTo(Post.class)
             .to(String.format("wordpress:post?url=%s&user=%s&password=%s", config.getWordpressUrl(), config.getWordpressUser(), config.getWordpressPassword()));
     }
