@@ -15,7 +15,6 @@ public final class StatisticsToPostConverter {
     public static Post toPost(StatisticsSummary statisticsSummary, Exchange exchange) {
         final Post post = new Post();
         post.setContent(new Content(statisticsSummary.getSummary()));
-        post.setDate(new Date());
         post.setFormat(Format.standard);
         post.setTitle(new Content(String.format("%s X %s Results", statisticsSummary.getFixture().getHomeTeamName(), statisticsSummary.getFixture().getAwayTeamName())));
 
