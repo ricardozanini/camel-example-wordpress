@@ -5,6 +5,7 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.wordpress.api.model.Post;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
+import org.apache.http.entity.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sample.camel.wordpress.model.Statistics;
@@ -21,7 +22,8 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
     public void configure() throws Exception {       
         onException(Exception.class)
             .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(500))
-            .setBody(simple("{ ${exception.message}\\n  }"))
+            .setHeader(Exchange.CONTENT_TYPE, constant(ContentType.APPLICATION_JSON))
+            .setBody(simple("{ \"error\": \"${exception.message}\" }"))
             .handled(true);
         
         restConfiguration() 
