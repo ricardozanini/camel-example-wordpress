@@ -1,6 +1,5 @@
 package sample.camel.wordpress.converters;
 
-import java.util.Date;
 import org.apache.camel.Converter;
 import org.apache.camel.Exchange;
 import org.apache.camel.component.wordpress.api.model.Content;

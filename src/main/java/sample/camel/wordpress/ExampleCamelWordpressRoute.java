@@ -1,5 +1,6 @@
 package sample.camel.wordpress;
 
+import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.wordpress.api.model.Post;
 import org.apache.camel.model.dataformat.JsonLibrary;
@@ -7,6 +8,7 @@ import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sample.camel.wordpress.model.Statistics;
+import sample.camel.wordpress.model.StatisticsSummary;
 import sample.camel.wordpress.nlg.ContentFactory;
 
 @Component
@@ -16,7 +18,12 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
     private ExampleCamelWordpressRouteConfig config;
   
     @Override
-    public void configure() throws Exception {        
+    public void configure() throws Exception {       
+        onException(Exception.class)
+            .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(500))
+            .setBody(simple("{ ${exception.message}\\n  }"))
+            .handled(true);
+        
         restConfiguration() 
         .component("servlet") 
         .producerComponent("restlet")
@@ -30,8 +37,8 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         rest("/match").description("Soccer Match endpoint")
             .consumes("application/json")
             .produces("application/json")
-                .get("/{fixtureId}/summary").description("Get game summary based on statistics").outType(String.class).to("direct:get-match-summary")
-                .get("/{fixtureId}/send").description("Send game summary to the Wordpress blog").outType(String.class).to("direct:send-to-wordpress");
+                .get("/{fixtureId}/summary").description("Get game summary based on statistics").outType(StatisticsSummary.class).to("direct:get-match-summary")
+                .get("/{fixtureId}/send").description("Send game summary to the Wordpress blog").outType(Post.class).to("direct:send-to-wordpress");
         
         //~~~~~~ Rest Routes
         from("direct:get-match-summary")
