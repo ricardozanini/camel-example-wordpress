@@ -24,9 +24,8 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
     public void configure() throws Exception {       
         final WordpressComponentConfiguration configuration = new WordpressComponentConfiguration();
         final WordpressComponent component = new WordpressComponent();
-        configuration.setUrl(config.getWordpressUrl());
-        configuration.setUser(config.getWordpressUser());
-        configuration.setPassword(config.getWordpressPassword());
+        configuration.setUrl(config.getWordpressUrl()); 
+        configuration.setApiVersion("2");
         component.setConfiguration(configuration);
         getContext().addComponent("wordpress", component);
         
@@ -78,7 +77,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         from("direct:post-new-summary")
             .routeId("post-new-summary")
             .convertBodyTo(Post.class)
-            .to("wordpress:post");
+            .to("wordpress:post?user=" + config.getWordpressUser() + "&password=" + config.getWordpressPassword());
     }
 
 }
