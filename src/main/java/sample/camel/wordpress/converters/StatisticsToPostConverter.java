@@ -5,6 +5,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.component.wordpress.api.model.Content;
 import org.apache.camel.component.wordpress.api.model.Format;
 import org.apache.camel.component.wordpress.api.model.Post;
+import org.apache.camel.component.wordpress.api.model.PublishableStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sample.camel.wordpress.model.StatisticsSummary;
@@ -26,6 +27,7 @@ public final class StatisticsToPostConverter {
         titleContent.setRaw(titleContent.getRendered());
         post.setContent(postContent);
         post.setFormat(Format.standard);
+        post.setStatus(PublishableStatus.publish);
         post.setTitle(titleContent);
         post.setAuthor(DEFAULT_AUTHOR_ID);
         LOGGER.debug("Converted StatisticsSummary {} to Post {}", statisticsSummary, post);
