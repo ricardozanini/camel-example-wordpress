@@ -2,6 +2,8 @@ package sample.camel.wordpress;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.wordpress.WordpressComponent;
+import org.apache.camel.component.wordpress.WordpressComponentConfiguration;
 import org.apache.camel.component.wordpress.api.model.Post;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
@@ -20,6 +22,14 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
   
     @Override
     public void configure() throws Exception {       
+        final WordpressComponentConfiguration configuration = new WordpressComponentConfiguration();
+        final WordpressComponent component = new WordpressComponent();
+        configuration.setUrl(config.getWordpressUrl());
+        configuration.setUser(config.getWordpressUser());
+        configuration.setPassword(config.getWordpressPassword());
+        component.setConfiguration(configuration);
+        getContext().addComponent("wordpress", component);
+        
         onException(Exception.class)
             .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(500))
             .setHeader(Exchange.CONTENT_TYPE, constant(ContentType.APPLICATION_JSON))
@@ -68,7 +78,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         from("direct:post-new-summary")
             .routeId("post-new-summary")
             .convertBodyTo(Post.class)
-            .to(String.format("wordpress:post?url=%s&user=%s&password=%s", config.getWordpressUrl(), config.getWordpressUser(), config.getWordpressPassword()));
+            .to("wordpress:post");
     }
 
 }
