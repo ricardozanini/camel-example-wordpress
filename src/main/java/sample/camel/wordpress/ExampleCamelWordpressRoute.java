@@ -60,9 +60,8 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         
         from("direct:send-to-wordpress")
             .routeId("send-to-wordpress")
-            .to("direct:get-fixture-detail")
-            .to("direct:convert-nlg")
-            .to("direct:post-new-summary");
+            .to("direct:get-match-summary")
+            .to("direct:post-news-summary");
         
         //~~~~~~ Routes specialization
         from("direct:get-fixture-detail")
@@ -75,8 +74,8 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
             .routeId("convert-nlg")
             .bean(ContentFactory.class, "generate");
         
-        from("direct:post-new-summary")
-            .routeId("post-new-summary")
+        from("direct:post-news-summary")
+            .routeId("post-news-summary")
             .convertBodyTo(Post.class)
             .to("wordpress:post");
     }

@@ -40,7 +40,7 @@ public class ExampleCamelWordpressRouteTest {
             }
         });
 
-        context.getRouteDefinition("post-new-summary").adviceWith(context, new AdviceWithRouteBuilder() {
+        context.getRouteDefinition("post-news-summary").adviceWith(context, new AdviceWithRouteBuilder() {
             
             @Override
             public void configure() throws Exception {
