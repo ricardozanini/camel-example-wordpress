@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "football.api.fixture.path",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.fixture.path'"
+  },
+  {
+    "name": "football.api.host",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.host'"
+  },
+  {
+    "name": "football.api.token",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.token'"
+  },
+  {
+    "name": "football.api.token",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.token'"
+  },
+  {
+    "name": "wordpress.url",
+    "type": "java.lang.String",
+    "description": "A description for 'wordpress.url'"
+  },
+  {
+    "name": "wordpress.url",
+    "type": "java.lang.String",
+    "description": "A description for 'wordpress.url'"
+  },
+  {
+    "name": "wordpress.user",
+    "type": "java.lang.String",
+    "description": "A description for 'wordpress.user'"
+  },
+  {
+    "name": "wordpress.password",
+    "type": "java.lang.String",
+    "description": "A description for 'wordpress.password'"
+  }
+]}
