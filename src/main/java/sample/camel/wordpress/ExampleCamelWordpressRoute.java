@@ -67,7 +67,7 @@ public class ExampleCamelWordpressRoute extends RouteBuilder {
         from("direct:get-fixture-detail")
             .routeId("get-fixture-details")
             .setHeader("X-Auth-Token", constant(config.getFootballApiToken()))
-            .to(String.format("rest:get:%s?host=%s&synchronous=true", config.getFootballApiFixturePath(), config.getFootballApiHost()))
+            .toF("rest:get:%s?host=%s&synchronous=true", config.getFootballApiFixturePath(), config.getFootballApiHost())
             .unmarshal().json(JsonLibrary.Jackson, Statistics.class);
         
         from("direct:convert-nlg")
