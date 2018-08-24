@@ -43,7 +43,7 @@ class StatisticsNLG {
             return phraseFactory.createNounPhrase(String.format("on last %s", matchDate.toString("EEE", Locale.US)));
         }
 
-        return phraseFactory.createNounPhrase(String.format("in %s", matchDate.toString("MMM, d", Locale.US)));
+        return phraseFactory.createNounPhrase(String.format("on %s", matchDate.toString("MMM, d", Locale.US)));
     }
 
     public NPPhraseSpec getAwayTeam() {
